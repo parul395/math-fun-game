@@ -118,8 +118,8 @@ function generateQA()
 {
   var a = 1+ Math.round(9*Math.random());
    var b =  1+ Math.round(9*Math.random());
-    c = a*b;
-    document.getElementById("ques").innerHTML= a + "x" + b ;
+    c = a/b;
+    document.getElementById("ques").innerHTML= a + "/" + b ;
     
     var obj = 1+ Math.round(3*Math.random());
     
@@ -130,7 +130,7 @@ function generateQA()
         if(i != obj){
             var wronga;
             do{
-                 wronga = 1+ Math.round(9*Math.random())* (1+ Math.round(9*Math.random()));
+                 wronga = 1+ Math.round(9*Math.random())/(1+ Math.round(9*Math.random()));
             }while(answer.indexOf(wronga)>-1)
             document.getElementById("b"+i).innerHTML = wronga;
             answer.push(wronga);
